@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use DB;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\InterviewViewController;
+
+class InterviewViewController extends Controller
+{
+    //
+    public function index(){
+        $collegelist = array(1, 2, 3, 4, 5);
+        $universitylist = array(1, 2, 3, 4, 5); 
+        $cptrlist = array(1, 2, 3, 4, 5); 
+        $uptrlist = array(1, 2, 3, 4, 5); 
+	$cgradelist = array(1, 2, 3, 4, 5); 
+	$ugradelist = array(1, 2, 3, 4, 5); 
+        return view('oldptr_view',compact('collegelist','universitylist','cptrlist','uptrlist','cgradelist','ugradelist' ));
+        }
+
+    public function answer1details(){
+        $universitymasterfinal= array(1, 2, 3, 4, 5);
+        $universityeclistfinal = array(1, 2, 3, 4, 5);
+        return view('view-answer1details',compact('universitymasterfinal','universityeclistfinal' ));
+        }
+    public function universitydetails(){
+        $universitymasterfinal= array(1, 2, 3, 4, 5);
+        $universityeclistfinal = array(1, 2, 3, 4, 5);
+        return view('view-universitydetails',compact('universitymasterfinal','universityeclistfinal' ));
+        }
+}
